@@ -23,20 +23,24 @@ Food: TBD
 """)
 
 ## asks for users name
-name = input("""
-********************************************************************
-Please enter your first name: """).lower()
+while True:
+    try:
+        name = input("""
+        ********************************************************************
+        Please enter your first name: """).lower()
 
-# legg inn loading screen
-time.sleep(1)
+        # legg inn loading screen
+        time.sleep(1)
 
-print(f"""
-********************************************************************
-Hi, {name.capitalize()}! 
+        print(f"""
+        ********************************************************************
+        Hi, {name.capitalize()}! 
 
-This is your current RSVP status of the Julebord: {guests[name]}""")
-
-time.sleep(1)
+        This is your current RSVP status of the Julebord: {guests[name]}""")
+        break
+    except:
+        print(f"could not find {name} in guestlist :/")
+    time.sleep(1)
 change_rsvp = input("Do you want to change your RSVP status? (Y / N): ").lower()
 
 
