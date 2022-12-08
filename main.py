@@ -5,6 +5,12 @@ import json
 with open('guests.json') as file:
     guests = json.load(file)
 
+#Maybe the easiest way (?) to play sound that will work 
+#for all Windows users without the need of installing a module
+from os import system
+system("start /MIN /B 12DaysOfChristmas.mp3")
+
+
 ## intro
 print(f"""
 {santa_claus_ascii}
